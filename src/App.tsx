@@ -33,7 +33,7 @@ function App() {
         gender="Male"
         address="Pokhara"
         personDetails={[
-          { name: "Sushan", age: 55, gender: "Male", address: "Pokhara" },
+          {id:1, name: "Sushan", age: 55, gender: "Male", address: "Pokhara" },
         ]}
       />
     </>
