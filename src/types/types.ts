@@ -1,27 +1,37 @@
-// types/types.ts
-
-export interface Person {
-  id: number;
-  name: string;
-  age: number;
-  gender: string;
-  address: string;
-}
-
-export interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
+export type Product = {
   category: string;
+  description: string;
+  id: number;
   image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-}
+  price: number;
+  rating: Rating;
+  title: string;
+};
+export type Rating = { rate: number; count: number };
 
-export interface HeaderProps extends Person {
-  personDetails: Person[];
-  state: Product[];
-}
+export type User = {
+  id: number;
+  email: string;
+  username: string;
+  password: string;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
+  phone: string;
+  address: Address | undefined | null;
+  __v: number;
+};
+
+export type Address = {
+  geolocation?: {
+    lat?: string;
+    long?: string;
+  };
+  city?: string;
+  street: string;
+  number: number;
+  zipcode: string;
+};
+
+export type Users = User[];

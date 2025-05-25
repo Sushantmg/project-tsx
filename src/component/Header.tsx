@@ -1,16 +1,7 @@
-import type { HeaderProps } from "../types/types";
 
-function Header(props :HeaderProps) {
-    const  {id, name, age ,gender, address,personDetails}=props;
+
+export default function header() {
   return (
-    <div>
-        {id}:{name}:{age}:{gender}:{address}
-        {personDetails.map((item) =>
-        <div>
-            {item.id},{item.name},{item.age},{item.gender},{item.address},
-            </div>
-        )}
-    </div>
+    <div>header</div>
   )
 }
-export default Header
