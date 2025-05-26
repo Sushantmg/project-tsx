@@ -16,7 +16,7 @@ function App() {
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [editingUser, setEditingUser] = useState<User | null>(null);
 
-  // Fetch Products from API
+  
   async function fetchProducts() {
     try {
       const res = await fetch("https://fakestoreapi.com/products");
@@ -29,7 +29,7 @@ function App() {
     }
   }
 
-  // Fetch Users from API
+  
   async function fetchUsers() {
     try {
       const res = await fetch("https://fakestoreapi.com/users");
@@ -47,7 +47,7 @@ function App() {
     fetchUsers();
   }, []);
 
-  // Product CRUD
+  
   const addProduct = (product: Product) => {
     setProducts([...products, product]);
     toast.success("Product added!");
@@ -68,7 +68,7 @@ function App() {
     toast.info("Product updated!");
   };
 
-  // User CRUD
+  
   const addUser = (user: User) => {
     setUsers([...users, user]);
     toast.success("User added!");
